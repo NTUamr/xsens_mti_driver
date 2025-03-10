@@ -83,6 +83,9 @@ install(
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
-add_custom_command(TARGET xsens_mti_node
-    PRE_BUILD COMMAND +make -C ${CMAKE_CURRENT_SOURCE_DIR}/lib/xspublic
+## add_custom_command(TARGET xsens_mti_node
+##     PRE_BUILD COMMAND +make -C ${CMAKE_CURRENT_SOURCE_DIR}/lib/xspublic
+## )
+add_custom_command(OUTPUT xsens_mti_node
+    COMMAND +make -C ${CMAKE_CURRENT_SOURCE_DIR}/lib/xspublic
 )
